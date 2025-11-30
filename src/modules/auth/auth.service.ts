@@ -6,7 +6,7 @@ const registerNewUser = async (payload: TUserRegistration) => {
   const user = await User.isUserAlreadyExist(payload.email);
 
   if (user) {
-    throw new Error("User already exists");
+    throw new Error("This email is already registered ⚠️");
   }
 
   const newUser = await User.create(payload);
