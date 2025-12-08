@@ -24,7 +24,7 @@ const userLogin = async (payload: TUserLogin) => {
   const isPasswordMatched = await user.comparePassword(payload.password, user.password);
 
   if (!isPasswordMatched) {
-    throw new Error("Password is incorrect");
+    throw new Error("That password was… bold. But wrong. 😂🔐");
   }
 
   return {
